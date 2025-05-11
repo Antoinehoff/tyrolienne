@@ -55,8 +55,9 @@ This repository contains a simulation and analysis of the motion of a rigid bar 
 
 ## Author
 
-code: Antoine C.D. Hoffmann
-exercice: Antoine C.D. Hoffmann, Louis Stenger, Paolo Ricci
+Code: Antoine C.D. Hoffmann
+
+Exercice: Antoine C.D. Hoffmann, Louis Stenger, Paolo Ricci
 
 ## License
 

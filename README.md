@@ -18,6 +18,8 @@ This repository contains a simulation and analysis of the motion of a rigid bar 
 - Visualization of the system's motion and energy evolution.
 - Animation of the bar's motion along the zipline.
 
+![tyrolienne_animation](https://github.com/user-attachments/assets/02106a29-ace5-4eeb-94d1-a851467898a4)
+
 ## Requirements
 
 ### Python

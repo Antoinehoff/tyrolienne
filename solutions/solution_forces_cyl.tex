@@ -1,0 +1,57 @@
+\par\vspace{2mm}
+Les forces en présence sont la gravité $m\bm g$ et le soutien du câble $\bm N$.
+Pour projeter ces forces on pose un premier référentiel d'inertie lié à la terre $\mathcal R$ avec l'origine $O$ posée sur le câble. 
+En plus des coordonnées cartésiennes $(x,y,z)$ définit un deuxième référentiel $\mathcal R'$ lié au point d'attache $A$ et on se munit d'un système de coordonnées cylindrique auxiliaire $(r,\theta,z)$ dont l'origine est en $A$.
+Le vecteur unitaire $\er$ est orienté selon $\overrightarrow{AG}$.
+L'angle $\theta$ mesure l'angle entre la tyrolienne et l'axe perpendiculaire au câble.
+Ces informations sont rassemblées sur la Figure \ref{fig:schema_details}.
+\par 
+On a les équivalences
+\begin{align}
+    \ex &= \sin\theta \er + \cos\theta \et,    \label{eq:ex_rt}\\
+    \ey &= -\cos\theta \er + \sin\theta \et
+    \label{eq:ey_rt}
+\end{align}
+et
+\begin{align}
+    \bm g &= g\sin\alpha \ex - g\cos\alpha \ey\nonumber\\
+        &= g[\sin\alpha\sin\theta + \cos\alpha\cos\theta]\er + g[\sin\alpha\cos\theta - \cos\alpha\sin\theta]\et\nonumber\\
+        &= g\cos(\theta-\alpha)\er - g\sin(\theta-\alpha)\et
+\end{align}
+Ainsi, la projection des forces dans le repère cylindrique est donnée par
+\begin{align}
+    m\bm g &= mg\cos(\theta-\alpha) \er - mg\sin(\theta-\alpha) \et,\\
+    \bm N  &= N \bm e_y.
+\end{align}
+
+Le théorème du centre de masse stipule que l'on peut appliquer la seconde loi de Newton en considérant chaque force appliquée sur la barre au centre de masse G.
+On obtient alors 
+\begin{align}
+    m \bm a_G &= \sum \bm F \nonumber\\
+    \Leftrightarrow m (\bm a'_G + \bm a_A) &= m\bm g + \bm N \label{eq:newtonCM}
+\end{align}
+o\`u $\bm a_G$ est l'accélération du centre de masse selon le référentiel d'inertie lié à $O$ et $\bm a'_G$ selon le référentiel accéléré lié à $A$. $\bm a_A$ est l'accélération relative du référentiel lié en $A$ par rapport au référentiel d'inertie.
+En exprimant ces différentes accélérations dans le système de coordonnée cylindrique on obtient
+\begin{align}
+    \bm a'_G &= (\ddot r - r\dot\theta^2)\er + (2\dot r \dot \theta + r \ddot \theta) \et  + \ddot z \ez \\
+    \bm a_A &=\ddot x_A\ex= \ddot x_A \sin\theta \er + \ddot x_A \cos\theta \et
+\end{align}
+Étant donné que la tyrolienne est un solide indéformable, le centre de masse ne peut pas se déplacer selon $\er$. Ceci impose $r=l=\textrm{const}$ et donc $\dot r = \ddot r =0$.
+On développe à présent l'Eq. \eqref{eq:newtonCM} selon les directions $\er$ et $\et$, i.e.
+\begin{align}
+    -ml\dot\theta^2 + m\ddot x_A\sin\theta &= -N\cos\theta + mg\cos(\theta-\alpha) \label{eq:NewtonCM_er}\\
+    ml\ddot\theta + m\ddot x_A\cos\theta &= N\sin\theta - mg\sin(\theta-\alpha)\label{eq:NewtonCM_et}.
+\end{align}
+L'équation du mouvement selon $\ez$ est triviale.
+Il est aussi possible de retrouver la seconde loi de Newton selon $\ex$ et $\ey$ en les combinant selon les équivalences Eqs. \eqref{eq:ex_rt} et \eqref{eq:ey_rt}, i.e.
+\begin{align}
+ml\ddot\theta\cos\theta - ml\dot\theta^2 \sin\theta  + m\ddot x_A &= m g \sin\alpha\label{eq:newton_ex}\\
+ml\ddot\theta\sin\theta +ml \dot\theta^2\cos\theta &= N - mg\cos\alpha \label{eq:newton_ey}
+\end{align}
+
+ \begin{figure}
+     \centering
+     \includegraphics[width=0.5\linewidth]{figures/tyrolienne_schemas_details_cable.pdf}
+     \caption{Schéma détaillé du problème}
+     \label{fig:schema_details}
+ \end{figure}

@@ -1,0 +1,85 @@
+\par\vspace{2mm}
+On procède par lois de conservation entre des instants clés.
+\subsubsection*{Instant $a$: condition initiale}
+L'énergie mécanique au point $O$, instant $a$ ($t=t_0$), est constituée uniquement d'énergie potentielle, i.e.
+\begin{equation}
+    E_{a} =mgh
+\end{equation}
+avec $h=d\sin\alpha$ (on garde la lettre h jusqu'à la fin pour simplifier l'écriture). 
+Ici on a fixé le zéro de l'énergie potentielle lorsque la tyrolienne est au point $B$ a $\theta=0$.
+
+\subsubsection*{Instant $b$: juste avant le choc}
+Juste avant l'arrivée au point $B$, instant $b$, l'énergie potentielle est nulle et la tyrolienne ne tourne pas (position d'équilibre).
+L'énergie mécanique est donc égale à l'énergie cinétique de translation, i.e.
+\begin{equation}
+    E_{b} = \frac{1}{2}mv_{G,b}^2.
+\end{equation}
+Entre les instants $a$ et $b$, L'énergie mécanique est conservée (il n'y a que la gravité qui travaille)
+\begin{equation}
+    E_{a} = E_{b} \Leftrightarrow mgh = \frac{1}{2}mv_{G,b}^2,
+\end{equation}
+ce qui nous donne la vitesse du centre de masse (et de toute la tyrolienne par extension) à l'arrivée au point $B$, $v_{G,b}=\sqrt{2gh}$.
+Le moment cinétique au point $A$ à l'instant $b$ est donné par 
+\begin{equation}
+    \bm L_{A,b} =\sum_i\overrightarrow{AP_i}\times m_i \bm v_{i,b} = \overrightarrow{AG}\times m \bm v_{G,b} + I_G \omega_b \ez = ml\sqrt{2gh}\ez,
+\end{equation}
+où $\omega_b=0$ car la barre n'effectue pas de rotation propre en cet instant.
+
+\subsubsection*{Instant $c$: juste après le choc}
+Lors de l'interaction avec le mécanisme au point $B$, la vitesse du point d'attache passe de $\dot x_{A}\ex =v_{G,b}\ex$ à $\dot x_{A}\ex =0$.
+Il y a donc une accélération non nulle du point d'attache ce qui implique l'existence d'une force $F_B\ex$ par la deuxième loi de Newton.
+Cette force travaille car elle est parallèle à la vitesse du point auquel elle s'applique.
+C'est pourquoi il n'y a ni conservation de l'énergie mécanique, ni conservation de la quantité de mouvement entre l'instant $b$ et $c$.
+Cependant, comme le moment de force associé à $\vec F_B$ est nul ($\vec M_B=\overrightarrow{AB}\times\vec F_B = 0$ car $\overrightarrow{AB}=0$), le moment cinétique au point $A$ est conservé lors du choc.
+Ainsi, juste après le choc, le moment cinétique au point $A$ s'écrit
+\begin{equation}
+    \bm L_{A,c} =\overrightarrow{AG}\times m \bm v_{G,c} + I_G \omega_c \ez = (1+\eta)mlv_{G,c}\ez
+\end{equation}
+ou on a utilise $v_{G,c} =  l\omega_c$.
+On égalise maintenant le moment cinétique d'avant et d'après le choc pour obtenir la vitesse du centre de masse à l'instant $c$, i.e.
+\begin{equation}
+    \bm L_{A,c} = \bm L_{A,b} \Leftrightarrow (1+\eta)mlv_{G,c} = ml\sqrt{2gh} \Leftrightarrow v_{G,c}= \frac{\sqrt{2gh}}{1+\eta}.
+    \label{eq:mcin_A_c}
+\end{equation}
+L'énergie mécanique à l'instant $c$ est donnée par
+\begin{equation}
+E_{c} = \frac{1}{2}mv_{G,c}^2 + \frac{1}{2}I_G\omega_c^2 = \frac{1}{2}m\left(v_{G,c}^2 + \frac{I_G}{ml^2}v_{G,c}^2\right) = (1+\eta)\frac{1}{2}m v_{G,c}^2.
+\end{equation}
+
+\note{On peut vérifier que l'énergie mécanique n'est pas conservée en calculant sa variation entre l'instant $b$ et $c$
+$$
+E_{c} - E_{b} = (1+\eta)\frac{1}{2}m v_{G,c}^2 - \frac{1}{2}mv_{G,b}^2 =\left[(1+\eta) - (1+\eta)^2\right]\frac{1}{2}m v_{G,c}^2 = -\eta E_{c} = -\frac{\eta}{1+\eta}E_b < 0.
+$$
+Comme $\eta>0$ on en conclut que de l'énergie est absorbée par le mécanisme.
+La variation relative d'énergie est donnée par $\delta = |E_c-E_b|/E_b = \eta/(1+\eta)$. 
+Pour une barre homogène ($I_G = ml^2/48$) on obtient $\delta = 1/49$ alors que pour un pendule ($I_G=ml^2$) on a $\delta = 1/2$, i.e. $50\%$ de l'énergie initiale est absorbée dans le mécanisme.}
+
+\subsubsection*{Instant d: amplitude maximale}
+Quand l'amplitude maximale est atteinte, instant $d$, la tyrolienne ne tourne plus, $\omega_{d}=0$, donc l'énergie mécanique s'écrit
+\begin{equation}
+    E_{d} = mgh_{max}
+\end{equation}
+L'énergie mécanique est conservée entre l'après choc ($c$) et l'amplitude maximale ($d$), on peut donc obtenir une equation pour $\theta_{max}$ en utilisant $h_{max}=l \cos(\alpha)-l\cos(\theta_{max}-\alpha)$, i.e.
+\begin{align}
+    &(1+\eta)\frac{1}{2}mv_{G,c}^2 = mgh_{max} \nonumber\\
+    \Leftrightarrow&\frac{mgh}{1+\eta} =mg l [\cos(\alpha)-\cos(\theta_{max}-\alpha)] \nonumber\\
+    \Leftrightarrow&\cos(\theta_{max}-\alpha) = \cos(\alpha) - \frac{1}{1+\eta}\frac{h}{l}\nonumber\\
+    \Leftrightarrow&\theta_{max}=\alpha+\arccos\left[\cos(\alpha) - \frac{1}{1+\eta}\frac{d}{l}\sin(\alpha)\right].
+    \label{eq:ampmax}
+\end{align}
+Comme $-1\leq \cos \leq 1$, l'équation \eqref{eq:ampmax} ne possède pas toujours une solution.
+Ceci est lié au fait qu'au dessus d'une certaine hauteur de départ, la barre ne s'arrêtera pas et continuera de tourner indéfiniment autour du point $B$ selon notre modèle.
+L'angle limite vaut $\theta_{lim}=\alpha+\pi$ et donc la distance limite vaut
+\begin{align}
+    d_{lim} = (1+\eta) \frac{\cos(\alpha) + 1}{\sin(\alpha)}l
+    \label{eq:hlim}
+\end{align}
+Et donc la barre effectuera des tours sur elle même si $d>d_{lim}$.
+
+
+\note{Étudions quelques limites pour se convaincre du résultat.
+Si $\alpha=2n\pi$, $\sin\alpha=0$ et $\cos\alpha=1$ et donc $d_{lim}=\infty$ ce qui est logique car on est dans le cas d'un câble horizontal et les rotations complètes ne sont pas possible avec un angle de départ nul.
+Si $\alpha=(2n+1)\pi$, $\sin\alpha=0$ et $\cos\alpha=-1$ et donc $d_{lim}="0/0"$.
+On calcule cette limite avec le théorème de l'Hospital et on obtient  $d_{lim}=0$ ce qui est logique car on est dans le cas "retourné" où la tyrolienne est au dessus du câble.
+Pour $\alpha =\pi/2$ on a $d_{lim}=(1+\eta)l$ ce qui donne $d_{lim}=2l$ dans le cas d'un pendule ($\eta = 1$). 
+Ce résultat coïncide avec le résultat sur le $\delta$ d'énergie mécanique absorbée par le mécanisme qui prédisait une perte de $50\%$ d'énergie initiale. }

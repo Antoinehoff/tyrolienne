@@ -1,0 +1,66 @@
+%%%%%%%%%%% CONSERVATION D'EMEC
+\par\vspace{2mm}
+En dérivant l'énergie cinétique de translation Eq. \eqref{eq:Ecin} on obtient
+\begin{align}
+    \dot E_{trans}&= ml^2\dot\theta\ddot\theta + m\dot x_A \ddot x_A +ml\ddot\theta \dot x_A \cos(\theta) + ml\dot\theta \ddot x_A \cos(\theta) - ml\dot\theta^2 \dot x_A \sin \theta.
+\end{align}
+La dérivée de l'énergie cinétique de rotation donne $\dot E_{rot}=I_G\dot\theta\ddot \theta$.
+La dérivée de l'énergie potentielle donne
+\begin{align}
+    \dot E_{pot} &= mg\left[l\dot\theta \sin(\theta-\alpha) - \dot x_A\sin(\alpha)\right].
+\end{align}
+On somme ces termes pour obtenir la dérivée de l'énergie mécanique totale
+\begin{align}
+    \dot E &= ml^2\dot\theta\ddot\theta + m\dot x_A \ddot x_A +ml\ddot\theta \dot x_A \cos(\theta) + ml\dot\theta \ddot x_A \cos(\theta) - ml\dot\theta^2 \dot x_A \sin(\theta) \nonumber\\
+    &\quad + I_G\dot\theta\ddot \theta + mg\left[l\dot\theta \sin(\theta-\alpha) - \dot x_A\sin(\alpha)\right].
+\end{align}
+On regroupe les termes entre ceux dépendants de $\dot\theta$ et ceux dépendants de $\dot x_A$ ce qui donne
+\begin{align}
+    \dot E &= \dot x_A \left[m\ddot x_A +ml\ddot\theta \cos(\theta) - ml\dot\theta^2 \sin(\theta) - mg\sin(\alpha)\right]\nonumber\\
+    &+ ml^2 \dot \theta \left[(1+\eta)\ddot\theta + \ddot x_A \cos(\theta)/l + \omega_0^2\sin(\theta-\alpha)\right].
+    \label{eq:Emecdot}
+\end{align}
+Le premier terme entre crochets de l'équation Eq. \eqref{eq:Emecdot} s'annule par la seconde loi de Newton en $\ex$ Eq. \eqref{eq:newton_ex}.
+Pour le deuxième terme entre crochets, on utilise d'abord l'équation Eq. \eqref{eq:Eqdumvt} afin de trouver une relation pour $\dot\theta^2$, i.e.
+$$
+-\sin(\theta)\cos(\theta)\dot\theta^2 = (\sin^2(\theta)+\eta)\ddot\theta + \omega_0\sin(\theta)\cos(\alpha).
+$$
+On utilise cette relation dans la seconde loi de Newton en $\ex$ Eq. \eqref{eq:newton_ex}, multipliée au préalable par $\cos(\theta)$, afin d'obtenir
+$$
+ml\ddot\theta \cos^2(\theta) + (\sin^2\theta+\eta)\ddot\theta + \omega_0\sin(\theta)\cos(\alpha) + m \ddot x_A \cos(\theta) = \omega_0 \sin(\alpha)\cos(\theta) 
+$$
+qui se simplifie en 
+$$
+(1+\eta)\ddot\theta + \ddot x_A \cos(\theta)/l + \omega^2 (\sin(\theta)\cos(\alpha) - \sin(\alpha)\cos(\theta)) = 0.
+$$
+En utilisant la relation trigonométrique $\sin(\theta)\cos(\alpha) - \sin(\alpha)\cos(\theta)=\sin(\theta-\alpha)$, cela prouve que le deuxième terme entre crochets de l'Eq. \eqref{eq:Emecdot} s'annule et donc que $\dot E = 0$.
+
+
+
+\subsubsection*{Alternative: théorème du moment cinétique en A avec force d'inertie}
+On peut aussi annuler le deuxième crochet de l'équation Eq. \eqref{eq:Emecdot} en invoquant le théorème du moment cinétique selon le point $A$ en prenant en compte les forces d'inerties.
+Au point de fixation A on écrit
+\begin{equation}
+    \frac{\mathrm d \bm{L}_A}{\mathrm d t} = \overrightarrow{AG}\times-m\bm a_A + \overrightarrow{AG}\times m\bm g
+    \label{eq:thm_cin_A}
+\end{equation}
+où on tient compte de l'accélération liée au référentiel non galiléen.
+Le moment cinétique en $A$ se décompose en
+\begin{align*}
+    \vec L_A &= \sum_i \overrightarrow{AP_i}\times m_i \vec v_i = \sum_i \left(\overrightarrow{AG}+\overrightarrow{GP_i}\right)\times m_i \vec v_i = \overrightarrow{AG}\times m \vec v_G + \sum_i\overrightarrow{GP_i}\times m_i \vec v_i \\
+    &= r \er \times m(\dot r \er + r\dot\theta \et) + \vec L_G = (ml^2 + I_G) \dot\theta \ez.
+\end{align*}
+Ainsi on obtient pour le membre de gauche de l'Eq. \eqref{eq:thm_cin_A}
+$$
+\frac{\mathrm d }{\mathrm d t}\bm L_A = \frac{\mathrm d }{\mathrm d t}\left[\left(ml^2+I_G\right)\dot\theta\ez\right] = \left(ml^2+I_G\right)\ddot\theta\ez.
+$$
+Le membre de droite de l'Eq. \eqref{eq:thm_cin_A} devient
+$$
+\overrightarrow{OA}\times-m\bm a_A + \overrightarrow{AG}\times m\bm g=-lm(a_A\cos(\theta) + g\sin(\theta-\alpha))\ez,
+$$
+ce qui donne une équation pour l'accélération du point de fixation
+\begin{equation}
+    \ddot x_A \cos(\theta) + (1+\eta) l \ddot\theta + g\sin(\theta-\alpha) = 0.
+    \label{eq:a_A}
+\end{equation}
+Cette équation est la même que celle trouvée pour annuler le deuxième terme entre crochets de l'équation Eq. \eqref{eq:Emecdot}.

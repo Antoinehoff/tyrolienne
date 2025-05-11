@@ -1,0 +1,27 @@
+\par\vspace{2mm}
+L'énergie mécanique totale est donnée par $E = E_{cin} + E_{pot}$.
+L'énergie cinétique se divise en $E_{cin} = E_{trans} + E_{rot}$ o\`u l'énergie de translation $E_{trans}$ s'écrit
+\begin{align}
+    E_{trans} &= \frac{1}{2} \bm v_G^2 = \frac{1}{2} m (\bm v_{G'} + \bm v_{A})^2 = \frac{1}{2} m \left[l\cos(\theta)\dot\theta \ex + l\sin(\theta)\dot\theta \ey + \dot x_A \ex\right]^2 \nonumber\\
+    &=\frac{1}{2}ml^2\dot\theta^2 + \frac{1}{2}m\dot x_A^2 + ml\dot\theta \dot x_A \cos(\theta),
+    \label{eq:Ecin}
+\end{align}
+et l'énergie cinétique de rotation de la barre $E_{rot}$ s'écrit
+\begin{align}
+    E_{rot} = \frac{1}{2} I_G \dot\theta^2.
+    \label{eq:Erot}
+\end{align}
+Finalement, l'énergie potentielle est liée à la gravité et s'écrit (en utilisant $-\bm g/g$ comme vecteur vertical unitaire)
+\begin{align}
+    E_{pot} &= mgh = -m\bm g \cdot \overrightarrow{OG} =-m\bm g \cdot \left(\overrightarrow{OA}+\overrightarrow{AG}\right)\nonumber\\
+    &= -m[g\sin(\alpha)\ex - g\cos(\alpha)\ey] \cdot [x_A \ex +l\sin(\theta)\ex - l\cos(\theta)\ey]\nonumber\\
+    &= -mg [x_A\sin(\alpha) + l\cos(\theta-\alpha)]
+    \label{eq:Epot}
+\end{align}
+o\`u on a utilisé $\sin(\theta-\alpha)\cos(\theta) - \cos(\theta-\alpha)\sin(\theta) = -\sin(\alpha)$.
+On obtient donc pour l'énergie mécanique totale
+\begin{align}
+    E
+    &=\frac{1}{2}m\left(l^2\dot\theta^2 + \dot x_A^2 + 2l\dot\theta \dot x_A \cos(\theta)\right) + \frac{1}{2} I_G \dot\theta^2 -mg\left[l\cos(\theta-\alpha) + x_A\sin(\alpha)\right]
+    \label{eq:Emec}
+\end{align}

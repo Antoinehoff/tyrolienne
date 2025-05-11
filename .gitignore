@@ -1,1 +1,13 @@
 *.gif
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.bcf
+*.run.xml
+*.blg
+*.fdb_latexmk
+doc/exercice*.pdf

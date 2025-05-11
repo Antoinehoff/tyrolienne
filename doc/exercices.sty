@@ -1,0 +1,88 @@
+\ProvidesPackage{exercices}
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb,bm,cancel}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{picins}
+\usepackage{titlesec}
+\usepackage{enumerate}
+\usepackage{footnote}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{scrextend}
+\usepackage{lastpage}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{empheq}
+\usepackage{subcaption}
+\usepackage{ragged2e}
+\usepackage[capitalize]{cleveref}
+\usepackage{wrapfig}
+\usepackage{physics}
+\usepackage{interval}
+%
+% Fonts
+\renewcommand*{\familydefault}{\sfdefault}
+%
+% Save footnotes in solutions
+\newcommand{\solutionnote}[1]{\ifprintanswers\footnote{#1}\fi}
+\makesavenoteenv{solution}
+%
+% titles, paragraphs and spacing
+\titlespacing{\paragraph}{0pt}{1ex}{1.5ex}
+\titlespacing{\subsection}{0pt}{4ex}{1.5ex}
+\titleformat{\section}{\normalfont\Large\bfseries\centering}{\thesection}{1em}{}
+%
+% Add line break inside a table
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+%
+% Exam class properties
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% header,footer
+\extraheadheight[3em]{0pt}
+\newcommand{\datehead}[1]{%
+\lhead[%
+{\bf \large Cours de physique avancée I (PAI) -- Prof. Paolo Ricci -- SPC}\\%
+\rule{\linewidth}{0.5mm}\\%
+\emph{#1}%
+]{}%
+}
+\footer{}{}{\ifprintanswers\thepage\else\thepage/\pageref{LastPage}\fi}
+%
+% question title and numbering
+\renewcommand{\questionshook}{%
+\setlength{\leftmargin}{0pt}%
+\setlength{\labelwidth}{-\labelsep}%
+\setlength{\itemsep}{2em}%
+}
+%
+% Points format
+\pointformat{\rotatebox{20}{\underline{\small\themarginpoints}}}
+\pointsinmargin
+\pointname{}
+%
+% question format
+\qformat{
+	\if@placepoints
+		\hspace{-1.8cm}
+		\rotatebox{20}{\underline{\small\themarginpoints}}
+	\fi
+	\bf\large\thequestion\quad\thequestiontitle\hfill
+}
+%
+% solution format
+\unframedsolutions
+\SolutionEmphasis{\rmfamily}
+\renewcommand{\solutiontitle}{}
+\setlength\answerskip{-1.3em}
+%
+% checkbox settings
+\checkboxchar{$\Box$}
+\checkedchar{$\blacksquare$}
+%
+% Lists
+\renewcommand{\labelitemi}{$\bullet$}
